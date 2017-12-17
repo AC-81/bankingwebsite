@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title  %}
+            SERVICES
+        {% endblock %}
+    </title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+{% include 'music/navbar.html' %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h3 style="color: #5a40cc ; text-align: center ; font-size: 30px">Disclaimer</h3>
+<p style="font-size: 25px ; color: midnightblue;">
+    The information, material, advices, suggestions, illustration, notification,
+    circulars etc. are collectively stated “the content” in this website. If the
+    said contents contains any mistakes, omissions,inaccuracies and typographical
+    errors, etc. A4 BANK assumes no responsibility thereof. A4 BANK
+    makes no warranties or representation regarding any content provided through
+    this website and disclaims its liabilities in respect thereof. A4 BANK
+    has taken all steps to prevent the introduction of viruses, worms or other
+    destructive material to this website. However, A4 BANK does not guarantee
+    or warrant that this website or the material that may be downloaded from this
+    website does not contain any such destructive material Any action on your part
+    on the basis of said contents is entirely at your risk and responsibility.
+    A4 BANK reserves its right to correct any part of the said content at
+    any time as and when required at its sole discretion. The contents of this website
+    shall not be displayed or printed in any form in part or whole without the prior
+    written approval of A4 BANK.<br><br>
+An entity wanting to create a link to the A4 BANKs' website is required to
+    obtain prior written approval from A4 BANK before doing so. A4 BANK may, at its absolute discretion, give or refuse to give such approval and
+    may as well rescind any approval granted and require the removal of any link
+    to A4 BANK website at any time. Any link to bank's website must be directed
+    to the homepage of Bank's corporate website only and 'framing' or 'deep-linking'
+    of bank's website or content is strictly prohibited. Any person using such
+    unauthorised link, website will be doing so at his own risk and responsibility
+    and A4 BANK will not be liable in any manner for any loss or damage
+    caused to the user or any party.<br><br>
+Any use or display of A4 BANK logo, trade name, trademark, web content
+    or material in any form is not permitted except with the prior written approval
+    from A4 BANK.<br><br>
+A4 BANK will not be responsible for the action of other websites and that
+    the Banks' name is protected by trademark and other relevant legislations.
+    The Bank reserves the rights to prosecute and take legal action of both civil
+    and criminal against people / persons and / or entities who may be acting in
+    any way purportedly on behalf of the Bank without its express permission and authorisation.<br>
+
+
+</p>
+<br><br>
+<p style="font-family: cursive ; color : darkblue ; font-size: 50px ; padding-left: 50px ; text-align: center" >
+    <a  href="{% url 'music:index' %}">
+        <button style=" width: 300px ; height: 45px" class="btn btn-success btn-lg">Home</button>
+    </a>
+
+
+</p>
+
+
+</body>

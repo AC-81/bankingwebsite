@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title  %}
+            BANK HOME PAGE
+        {% endblock %}
+    </title>
+    {% include 'music/head.html' %}
+
+</head>
+<body>
+
+{% include 'music/navbar.html' %}
+
+<br> <br>
+<h1 style="font-family : 'Bitstream Vera Sans' ; text-align: center ; color : navy ;"   >WITH YOU , RIGHT THROUGH</h1>
+<br>
+<br>
+
+
+
+{% include 'music/corousel.html' %}
+
+
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

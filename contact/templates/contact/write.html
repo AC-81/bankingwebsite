@@ -1,0 +1,44 @@
+
+{% extends 'contact/base.html' %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+      <h2 style="text-align:center; color:blue;">Write To Us</h2>
+        <br><br><br>
+      <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+          <p style="margin-left: 500px">
+            {{ field.label_tag }}
+          <br>
+            {{ field }}
+
+           {% if field.help_text %}
+              <small style="color: blueviolet">{{ field.help_text }}</small>
+            {% endif %}
+            <br><br><br>
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+        {% endfor %}
+        <button style=" margin-left: 625px; width: 100px ; height: 45px" class="btn btn-success btn-lg">Send</button>
+      </form>
+    {% else %}
+        <br><br><br><br><br><br><br><br>
+        <div class="alert alert-success" style="width: 400px ; text-align: center ; margin-left: 430px ; left: 50%">
+            <center>
+                <strong style="text-align: center">
+                 LOGIN FIRST TO USE THIS.</strong>
+            </center>
+        </div>
+
+        <a href = "{% url 'login:login' %}">
+            <button style=" margin-left: 575px;
+                width: 100px ; height: 45px"
+                    class="btn btn-success btn-lg">Login
+            </button>
+        </a>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title  %}
+            Contact
+        {% endblock %}
+    </title>
+    {% load staticfiles %}
+    {% include 'contact/head.html' %}
+
+</head>
+<body>
+
+
+
+<br> <br>
+<h1 style="font-family : 'Bitstream Vera Sans' ; text-align: center ; color : navy ;"   >WITH YOU , RIGHT THROUGH</h1>
+<br>
+<br>
+
+{% include 'contact/navbar.html' %}
+
+
+
+{% block body %}
+{% endblock %}
+</body>
+</html>

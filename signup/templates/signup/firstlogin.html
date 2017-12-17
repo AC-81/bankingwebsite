@@ -1,0 +1,37 @@
+{% extends 'signup/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1 style="text-align:center; color:blue;">Enter Your Personal Info.</h1>
+        </div>
+        <center>
+            <div class="jumbotron">
+                <form method="post">
+                    {% csrf_token %}
+                         <!-- {{ form.as_p }} -->
+
+                    {% for field in form %}
+                        <p>
+                            {{ field.label_tag }}<br>
+                            {{ field }}<br>
+                                {% if field.help_text %}
+                                    <div style="color: grey;font-size: 15px">{{ field.help_text }}</div>
+                                 {% endif %}
+                             {% for error in field.errors %}
+                                    <p style="color: red">{{ error }}</p>
+                             {% endfor %}
+                        </p>
+                    {% endfor %}
+                    <br><br>
+                    <a href="{% url 'music:index' %}">
+                        <button class="btn btn-success btn-lg"
+                            type="submit" style="text-align: center">Sign up</button>
+
+                    </a>
+
+                </form>
+            </div>
+        </center>
+    </div>
+{% endblock %}

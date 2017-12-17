@@ -1,0 +1,16 @@
+body{
+    background: white url(images/back.jpg);
+    background-repeat: no-repeat;
+        background-size:cover;
+
+}
+.navbar-inverse {
+     background-color: #5a40cc !important ;
+     color: #4dff34 !important;
+     font-family: Symbola !important;
+    font-size: 20px !important;
+
+}
+
+
+

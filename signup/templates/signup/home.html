@@ -1,0 +1,15 @@
+{% extends 'signup/base.html' %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+  <h2 style="text-align:center; color:green;">Welcome, {{ user.get_full_name }}</h2>
+  <p style="text-align:center;" >Your account balance is <span style="color:red;">1030400.50</span></p>
+
+{% else %}
+HOME PAGE CONTENT
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,40 @@
+
+
+<!-- THIS IS OUR NAV BAR -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header" style="width: 100px;">
+      <a class="navbar-brand"  style="font-size: 1.5em; font-weight: bold; " href="{% url 'music:index' %}">A4 Bank</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li style="font-size: 1.2em;"><a href="{% url 'music:index' %}"><span class="glyphicon glyphicon-home"></span>  Home</a></li>
+      {% if user.is_authenticated %}
+        <li class="dropdown" style="font-size: 1.2em;">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-folder-open"></span> Profile
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">View Profile</a></li>
+          <li><a href="#">Transfer Funds</a></li>
+        </ul>
+      </li>
+      {% endif %}
+      <li><a href="#" style="font-size: 1.2em;"><span class="glyphicon glyphicon glyphicon-tasks"></span> Products and Services</a></li>
+      <li><a href="{% url 'contact:index' %}" style="font-size: 1.2em;"><span class="glyphicon glyphicon-phone-alt"></span> Contact Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    {% if not user.is_authenticated %}
+      <li style="font-size: 1.2em;"><a href="{% url 'signup:home' %}"><span class="glyphicon glyphicon-user"></span> Register</a>
+      </li>
+    {% endif %}
+      <li style="font-size: 1.2em;">
+           {% if user.is_authenticated %}
+               <a href="{% url 'logout:logout' %}"> Logout</a>
+           {% else %}
+                <a href="{% url 'login:login' %}"> Login</a>
+           {% endif %}
+          </li>
+    </ul>
+  </div>
+</nav>
+

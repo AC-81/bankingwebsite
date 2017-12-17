@@ -1,0 +1,23 @@
+{% extends 'signup/base.html' %}
+
+
+
+{% block content %}
+    <br><br><br><br><br><br><br><br>
+    <div class="alert alert-success" style="width: 400px ; text-align: center ; margin-left: 430px ; left: 50%">
+        <center>
+            <strong style="text-align: center">Success!
+             SIGNUP SUCCESSFUL.</strong>
+        </center>
+    </div>
+
+
+    <br>
+    <a href="{% url 'login:login' %}">
+    <p style="text-align: center">
+        <button class="btn btn-success btn-lg"
+                            type="submit" style="text-align: center">Login</button>
+    </p>
+    </a>
+
+{% endblock %}

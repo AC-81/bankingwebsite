@@ -1,0 +1,28 @@
+{% extends 'music/base.html' %}
+
+{% block title %}Album Details {% endblock %}
+{% block body %}
+
+
+
+
+<h1>{{ "ALBUM ARTIST ->  " }}{{ album.artist }}</h1>
+<h3>{{ "ALBUM GENRE  ->  "  }}{{ album.genre }}</h3>
+
+
+<img src="{{ album.image }}" alt = "{{ album.year_of_release }}" width="100px"
+            height ="100px" >
+    <br>
+
+{% if error_message %}
+    <p> <strong>{{ error_message }}</strong></p>
+
+{% endif %}
+
+    {% for song in album.song_set.all %}
+        <p style="font-size: 50px ; color: orange">  {{ song.song_title }}</p>
+        <br>
+      {% endfor %}
+
+
+{% endblock %}
